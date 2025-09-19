@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/botom_artistas"
+            android:title="Artistas"
+            android:icon="@drawable/ic_artist"/>
+
+        <item
+            android:id="@+id/botom_generos"
+            android:title="Gêneros"
+            android:icon="@drawable/ic_gender"/>
+
+        <item
+            android:id="@+id/botom_lancamentos"
+            android:title="Lançamentos"
+            android:icon="@drawable/ic_new"/>
+
+        <item
+            android:id="@+id/botom_musica"
+            android:title="Música"
+            android:icon="@drawable/ic_music"/>
+
+        <item
+            android:id="@+id/botom_vestuario"
+            android:title="Vestuário"
+            android:icon="@drawable/ic_clothes"/>
+
+        <item
+            android:id="@+id/botom_acessorios"
+            android:title="Acessórios"
+            android:icon="@drawable/ic_acessories"/>
+
+    </group>
+
+</menu>
