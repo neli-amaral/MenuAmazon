@@ -6,32 +6,32 @@
         android:checkableBehavior="single">
 
         <item
-            android:id="@+id/botom_artistas"
+            android:id="@+id/nav_artistas"
             android:title="Artistas"
             android:icon="@drawable/ic_artist"/>
 
         <item
-            android:id="@+id/botom_generos"
+            android:id="@+id/nav_generos"
             android:title="Gêneros"
             android:icon="@drawable/ic_gender"/>
 
         <item
-            android:id="@+id/botom_lancamentos"
+            android:id="@+id/nav_lancamentos"
             android:title="Lançamentos"
             android:icon="@drawable/ic_new"/>
 
         <item
-            android:id="@+id/botom_musica"
+            android:id="@+id/nav_musica"
             android:title="Música"
             android:icon="@drawable/ic_music"/>
 
         <item
-            android:id="@+id/botom_vestuario"
+            android:id="@+id/nav_vestuario"
             android:title="Vestuário"
             android:icon="@drawable/ic_clothes"/>
 
         <item
-            android:id="@+id/botom_acessorios"
+            android:id="@+id/nav_acessorios"
             android:title="Acessórios"
             android:icon="@drawable/ic_acessories"/>
 
