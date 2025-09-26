@@ -8,7 +8,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.annelise.menuamazon"
+        applicationId = "com.annelise.navigationdrawer"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

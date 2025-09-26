@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MenuAmazon" parent="Theme.Material3.Dark.NoActionBar">
 
-        <item name="colorPrimary">@color/green</item>
-        <item name="colorPrimaryVariant">@color/green</item>
-        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimary">#1E211E</item>
+        <item name="colorPrimaryVariant">#062309</item>
+        <item name="android:statusBarColor">#1E211E</item>
 
     </style>
 

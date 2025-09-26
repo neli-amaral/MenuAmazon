@@ -3,11 +3,10 @@ package com.annelise.menuamazon
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
+import androidx.activity.addCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -15,6 +14,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.annelise.menuamazon.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
+
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -37,12 +38,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         binding.menuAmazon.setNavigationItemSelectedListener(this)
 
-        binding.bottomNavigation.setOnClickListener { item ->
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.bottom_menu -> openFragment(MenuFragment())
                 R.id.bottom_home -> openFragment(HomeFragment())
                 R.id.bottom_profile-> openFragment(ProfileFragment())
                 R.id.bottom_cart -> openFragment(CartFragment())
+            }
+            true
+        }
+
+        fragmentManager = supportFragmentManager
+        openFragment(HomeFragment())
+
+        binding.fab.setOnClickListener {
+            Toast.makeText(this, "Categorias", Toast.LENGTH_SHORT).show()
+        }
+
+        onBackPressedDispatcher.addCallback(this){
+            if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)){
+                binding.drawerLayout.closeDrawer(GravityCompat.START)
+            }else{
+                finish()
             }
 
         }
@@ -53,9 +70,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_artistas -> openFragment(ArtistasFragment())
             R.id.nav_generos -> openFragment(GenerosFragment())
             R.id.nav_lancamentos -> openFragment(LancamentosFragments())
-            R.id.nav_musica -> Toast.makeText(this, "Música", Toast.LENGTH_SHORT).show
-            R.id.nav_vestuario -> Toast.makeText(this, "Vestuário", Toast.LENGTH_SHORT).show
-            R.id.nav_acessorios -> Toast.makeText(this, "Acessórios", Toast.LENGTH_SHORT).show
+            R.id.nav_musica -> Toast.makeText(this, "Música", Toast.LENGTH_SHORT).show()
+            R.id.nav_vestuario -> Toast.makeText(this, "Vestuário", Toast.LENGTH_SHORT).show()
+            R.id.nav_acessorios -> Toast.makeText(this, "Acessórios", Toast.LENGTH_SHORT).show()
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
