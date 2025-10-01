@@ -51,14 +51,14 @@
             android:layout_height="wrap_content"
             app:backgroundTint="@color/black"
             android:contentDescription="Adicionar"
-            android:src=""
+            android:src="@drawable/ic_add"
             app:layout_anchor="@id/bottomAppBar"
             app:maxImageSize="40dp"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
+        android:id="@+id/navigation_drawer"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"

@@ -34,7 +34,7 @@ class LancamentosFragments : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lancamentos_fragments, container, false)
+        return inflater.inflate(R.layout.fragment_lancamentos, container, false)
     }
 
     companion object {

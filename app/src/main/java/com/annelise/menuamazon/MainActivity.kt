@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        binding.menuAmazon.setNavigationItemSelectedListener(this)
+        binding.navigationDrawer.setNavigationItemSelectedListener(this)
 
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when(item.itemId){
